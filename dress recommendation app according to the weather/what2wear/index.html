@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Hava Durumuna Göre Ne Giyeceğine Karar Ver!">
+    <title>what2wear</title>
+
+</head>
+<body onload="DefaultScreen()">
+    <center>
+    <div class="main">
+        <div class="headerarea">
+        <div class="logo"><a href="index.html"><img src="images/logo.png" style="width: 300px; height: 140px; background-color: white;"></a></div>
+        <div class="switchDiv">
+            <img class="genderImg" src="images/maleicon.png" style="float: left"  width="40px" height="40px">
+            <label class="switch">
+                <input id="chkGender" type="checkbox" checked onclick="ChangeGender()">
+                <div class="slider round"></div>
+            </label>
+            <img class="genderImg" src="images/femaleicon.png" style="float: right"  width="30px" height="39px" >
+        </div>
+        <div class="favkonum">
+            <nav class="menu">
+            <ul>
+            <li><a href="#">FAVORI KONUMLAR</a>
+              <ul>
+                <li><a href="#" onclick="Istanbul()">Istanbul</a></li>
+                <li><a href="#" onclick="DefaultScreen()">Izmir</a></li>
+                <li><a href="#" onclick="Ankara()">Ankara</a></li>
+              </ul>  
+            </li>
+            </ul>
+          </nav> 
+        </div>
+        <div class="gardrop"><a href="wardrobe.html" class="menuyazi">GARDIROP</a></div>
+        <div class="ayarlar"><a href="" class="menuyazi">AYARLAR</a></div>
+        <div class="login"><a href="uyelik2/kayiit.php" class="menuyazi">GIRIS YAP / KAYDOL</a></div>
+        <p id="inputContainer"> <input type="text" id="cityInput"></p>
+        <button type="button" onclick="GetInfo()"><img class="searchlogo" src="./images/search_icon.png"></button>        
+        </div>
+    <div id = "weatherContainer">
+        <div id="iconsContainer">    
+            <div class="icons">
+                <p class="weather" id="day1"></p>
+                <center><div class="image"><img src="dots.png" class="imgClass" id="img1"></div></center>
+                <p class="minValues" id="day1Min">Yükleniyor...</p>
+                <p class="maxValues" id="day1Max">Yükleniyor...</p>
+                <div id="day1temp" hidden></div>
+                <div id="divUst" class="ust"><img src="" class="ustimgClass" id="img1Top"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divDis" class="dis"><img src="" class="disimgClass" id="img1Out"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAlt" class="alt"><img src="" class="altimgClass" id="img1Bottom"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAyakkabi" class="ayakkabi"><img src="" class="accimgClass" id="img1Shoe"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAcc" class="aksesuar"><img src="" class="accimgClass" id="img1Acc"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+            </div>
+            <div class="icons">
+                <p class="weather" id="day2"></p>
+                <center><div class="image"><img src="dots.png" class="imgClass" id="img2"></div></center>
+                <p class="minValues" id="day2Min">Yükleniyor...</p>
+                <p class="maxValues" id="day2Max">Yükleniyor...</p>
+                <div id="day2temp" hidden></div>
+                <div id="divUst" class="ust"><img src="" class="ustimgClass" id="img2Top"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divDis" class="dis"><img src="" class="disimgClass" id="img2Out"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAlt" class="alt"><img src="" class="altimgClass" id="img2Bottom"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAyakkabi" class="ayakkabi"><img src="" class="accimgClass" id="img2Shoe"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAcc" class="aksesuar"><img src="" class="accimgClass" id="img2Acc"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+            </div>
+            <div class="icons">
+                <p class="weather" id="day3"></p>
+                <center><div class="image"><img src="dots.png" class="imgClass" id="img3"></div></center>
+                <p class="minValues" id="day3Min">Yükleniyor...</p>
+                <p class="maxValues" id="day3Max">Yükleniyor...</p>
+                <div id="day3temp" hidden></div>
+                <div id="divUst" class="ust"><img src="" class="ustimgClass" id="img3Top"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divDis" class="dis"><img src="" class="disimgClass" id="img3Out"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAlt" class="alt"><img src="" class="altimgClass" id="img3Bottom"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAyakkabi" class="ayakkabi"><img src="" class="accimgClass" id="img3Shoe"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAcc" class="aksesuar"><img src="" class="accimgClass" id="img3Acc"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+            </div>
+            <div class="icons">
+                <p class="weather" id="day4"></p>
+                <center><div class="image"><img src="dots.png" class="imgClass" id="img4"></div></center>
+                <p class="minValues" id="day4Min">Yükleniyor...</p>
+                <p class="maxValues" id="day4Max">Yükleniyor...</p>
+                <div id="day4temp" hidden></div>
+                <div id="divUst" class="ust"><img src="" class="ustimgClass" id="img4Top"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divDis" class="dis"><img src="" class="disimgClass" id="img4Out"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAlt" class="alt"><img src="" class="altimgClass" id="img4Bottom"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAyakkabi" class="ayakkabi"><img src="" class="accimgClass" id="img4Shoe"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAcc" class="aksesuar"><img src="" class="accimgClass" id="img4Acc"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+            </div>
+            <div class="icons">
+                <p class="weather" id="day5"></p>
+                <center><div class="image"><img src="dots.png" class="imgClass" id="img5"></div></center>
+                <p class="minValues" id="day5Min">Yükleniyor...</p>
+                <p class="maxValues" id="day5Max">Yükleniyor...</p>
+                <div id="day5temp" hidden></div>
+                <div id="divUst" class="ust"><img src="" class="ustimgClass" id="img5Top"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divDis" class="dis"><img src="" class="disimgClass" id="img5Out"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAlt" class="alt"><img src="" class="altimgClass" id="img5Bottom"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAyakkabi" class="ayakkabi"><img src="" class="accimgClass" id="img5Shoe"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+                <div id="divAcc" class="aksesuar"><img src="" class="accimgClass" id="img5Acc"></div>
+                <div class="buyit"><a href="" class="satinal">SATIN AL !</a></div>
+            </div>
+            <div class="footer">
+                <a class="socialmedia" href="https://www.facebook.com/" target="_blank"><img class="socialmedia" src="images/facebook.png"></a>
+                <a class="socialmedia" href="https://www.instagram.com/?hl=en"target="_blank"><img class="socialmedia" src="images/instagram.png"></a>
+                <a class="socialmedia" href="https://twitter.com/i/flow/login"target="_blank"><img class="socialmedia" src="images/twitter.png"></a>
+                <a class="socialmedia" href="https://www.tiktok.com/en/"target="_blank"><img class="socialmedia" src="images/tiktok.png"></a>
+                <a class="socialmedia" href="https://www.youtube.com/?hl=tr&gl=TR"target="_blank"><img class="socialmedia" src="images/youtube.png"></a>
+            </div>
+        </div>
+    </div>
+</div>
+</center>
+
+
+        <script src="main.js"></script>
+
+
+</body>
+</html> 

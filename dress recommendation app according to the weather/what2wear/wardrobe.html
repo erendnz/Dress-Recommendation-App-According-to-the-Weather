@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="wardrobestyle1.css">
+    <script src="https://kit.fontawesome.com/91e066b199.js" crossorigin="anonymous"></script>
+    <title>what2wear</title>
+</head>
+<body>
+    <div class="main">
+        <div class="headerarea">
+        <div class="logo"><a href="index.html"><img src="images/logo.png" style="width: 300px; height: 140px; background-color: transparent;"></a></div>
+        
+        <div class="favkonum">
+            <nav class="menu">
+            <ul>
+            <li><a href="#">FAVORI KONUMLAR</a>
+              <ul>
+                <li><a href="#" onclick="">Istanbul</a></li>
+                <li><a href="#" onclick="">Izmir</a></li>
+                <li><a href="#" onclick="">Ankara</a></li>
+              </ul>  
+            </li>
+            </ul>
+          </nav> 
+        </div>
+        <div class="gardrop"><a href="wardrobe.html" class="menuyazi">GARDIROP</a></div>
+        <div class="ayarlar"><a href="" class="menuyazi">AYARLAR</a></div>
+        <div class="login">  <a href="" class="menuyazi">GIRIS YAP / KAYDOL</a></div>
+        <p id="inputContainer"> <input type="text" id="cityInput"></p>
+        <button type="button" onclick="GetInfo()"><img class="searchlogo" src="./images/search_icon.png"></button>        
+        </div>
+
+
+
+
+
+    <article class="main-wardrobe">
+        <div class="ust-giyim">
+            <form name="form" action="..." method="post">
+                <label class="container"><img src="img/kiyafet-img/ust-giyim/cloth.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="ust-gomlek">
+                    <span class="checkmark"></span>
+                </label>        
+                <label class="container"><img src="img/kiyafet-img/ust-giyim/cotton-polo-shirt.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="ust-polotshirt">
+                    <span class="checkmark"></span>
+                </label>        
+                <label class="container">
+                    <input type="checkbox" name="ust-kapsonlusweat"><img src="img/kiyafet-img/ust-giyim/hoodie.png" style="width: 50px; height:50px" alt="">
+                    <span class="checkmark"></span>
+                </label>        
+                <label class="container"><img src="img/kiyafet-img/ust-giyim/sweater (1).png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="ust-kazak">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/ust-giyim/sweater.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="ust-sweat">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/ust-giyim/tshirt.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="ust-tshirt">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+            <div id="kapak1"><button id="gizle1"><img class="icons" src="img/tshirt.png"></button></div>
+        </div>
+        <div class="dis-giyim">
+            <form name="form" action="..." method="post">
+                <label class="container"><img src="img/kiyafet-img/dis-giyim/blazer.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="dis-blazer">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="container"><img src="img/kiyafet-img/dis-giyim/jacket (1).png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="dis-sisme">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="container"><img src="img/kiyafet-img/dis-giyim/jacket.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="dis-ceket">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="container"><img src="img/kiyafet-img/dis-giyim/leather-biker-jacket.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="dis-dericeket">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/dis-giyim/raincoat.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="dis-yagmurluk">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/dis-giyim/trench-coat.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="dis-trenchcoat">
+                    <span class="checkmark"></span>
+                </label>
+            </form>
+            <div id="kapak2"><button id="gizle2"><img class="icons" src="img/jacket.png"></button></div>
+        </div>
+        <div class="alt-giyim">
+            <form name="form" action="..." method="post">
+                <label class="container"><img src="img/kiyafet-img/alt-giyim/cargo.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="alt-cargo">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="container"><img src="img/kiyafet-img/alt-giyim/chino-shorts.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="alt-chinoshort">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="container"><img src="img/kiyafet-img/alt-giyim/denim-shorts.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="alt-denimshort">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="container"><img src="img/kiyafet-img/alt-giyim/jeans.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="alt-jean">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/alt-giyim/loose-pants.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="alt-loose">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/alt-giyim/pants.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="alt-cargoshort">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/alt-giyim/skirt.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="alt-shortskirt">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/alt-giyim/slim-fit-pants.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="alt-slim">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/alt-giyim/slit-skirt.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="alt-slitskirt">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/alt-giyim/sweatpants.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="alt-sweathpant">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/alt-giyim/trousers.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="alt-trousers">
+                    <span class="checkmark"></span>
+                </label>
+
+            </form>
+            <div id="kapak3"><button id="gizle3"><img class="icons" src="img/panths.png"></button></div>
+        </div>
+        <div class="ayakkabilar">
+            <form name="form" action="..." method="post">
+                <label class="container"><img src="img/kiyafet-img/ayakkabilar/boot.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="ayakkabi-bot">
+                    <span class="checkmark"></span>
+                </label>
+            
+                <label class="container"><img src="img/kiyafet-img/ayakkabilar/flip-flops.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="ayakkabi-flipflop">
+                    <span class="checkmark"></span>
+                </label>
+            
+                <label class="container"><img src="img/kiyafet-img/ayakkabilar/high-heels.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="ayakkabi-yuksektopuk">
+                    <span class="checkmark"></span>
+                </label>
+            
+                <label class="container"><img src="img/kiyafet-img/ayakkabilar/leather-chelsea-boots.png" style="width: 50px; height:50px" alt="">
+                  <input type="checkbox" name="ayakkabi-leatherchelsea">
+                  <span class="checkmark"></span>
+                </label>
+
+                <label class="container"><img src="img/kiyafet-img/ayakkabilar/loafer.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="ayakkabi-loafer">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="container"><img src="img/kiyafet-img/ayakkabilar/rugan.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="ayakkabi-rugan">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="container"><img src="img/kiyafet-img/ayakkabilar/sneakers (1).png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="ayakkabi-sneaker">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container"><img src="img/kiyafet-img/ayakkabilar/sneakers (2).png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="ayakkabi-spor">
+                    <span class="checkmark"></span>
+                </label>
+
+                <label class="container"><img src="img/kiyafet-img/ayakkabilar/sneakers.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="ayakkabi-basket">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="container"><img src="img/kiyafet-img/ayakkabilar/wool-boots.png" style="width: 50px; height:50px" alt="">                       
+                    <input type="checkbox" name="ayakkabi-woolboots">
+                    <span class="checkmark"></span>
+                </label>
+               
+            </form>
+            <div id="kapak4"><button id="gizle4"><img class="icons" src="img/shoes.png"></button></div>
+        </div>
+        <div class="aksesuar">
+            <form name="form" action="..." method="post">
+                <label class="container"><img src="img/kiyafet-img/aksesuar/backpack.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="aksesuar-backpack">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="container"><img src="img/kiyafet-img/aksesuar/cap.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="aksesuar-kep">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="container"><img src="img/kiyafet-img/aksesuar/leather-gloves.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="aksesuar-eldiven">
+                    <span class="checkmark"></span>
+                </label>
+                
+                <label class="container"><img src="img/kiyafet-img/aksesuar/scarf.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="aksesuar-atki">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/aksesuar/sunglasses.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="aksesuar-sunglasses">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/aksesuar/umbrella.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="aksesuar-umbrella">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container"><img src="img/kiyafet-img/aksesuar/watch.png" style="width: 50px; height:50px" alt="">
+                    <input type="checkbox" name="aksesuar-saat">
+                    <span class="checkmark"></span>
+                </label>
+
+            </form>
+            <div id="kapak5"><button id="gizle5"><img class="icons" src="img/jewelry.png"></button></div>
+        </div>
+        <div class="button-alani">
+            <form name="form" action="..." method="post">
+                <input type="submit" id="submit-button" value="DEVAM ET">
+            </form>
+        </div>
+    </article>
+    <script>
+        var gizle1=document.getElementById("gizle1");
+        gizle1.onclick=function(){
+         document.getElementById("kapak1").style.display="none";
+ 
+        }
+    </script>
+    <script>
+        var gizle2=document.getElementById("gizle2");
+        gizle2.onclick=function(){
+         document.getElementById("kapak2").style.display="none";
+ 
+        }
+    </script>
+    <script>
+        var gizle3=document.getElementById("gizle3");
+        gizle3.onclick=function(){
+         document.getElementById("kapak3").style.display="none";
+    
+        }
+    </script>
+    <script>
+        var gizle4=document.getElementById("gizle4");
+        gizle4.onclick=function(){
+         document.getElementById("kapak4").style.display="none";
+ 
+        }
+    </script>
+    <script>
+        var gizle5=document.getElementById("gizle5");
+        gizle5.onclick=function(){
+         document.getElementById("kapak5").style.display="none";
+ 
+        }
+    </script>
+</body>
+</html>
